@@ -25,6 +25,12 @@ public class Main {
 //        Movie movie1=(Movie) applicationContext.getBean("movie");
 //        System.out.println(movie1);
 //        System.out.println(movie==movie1);
+
+
+
+
+
+
     }
 
 }

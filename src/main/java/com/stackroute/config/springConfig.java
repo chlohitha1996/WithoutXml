@@ -2,6 +2,16 @@ package com.stackroute.config;
 import com.stackroute.Actor;
 import com.stackroute.Actor;
 import com.stackroute.Movie;
+import com.stackroute.awareinterface.applicationContextAwareDemo;
+import com.stackroute.awareinterface.beanFactoryAwareDemo;
+import com.stackroute.awareinterface.beanNameAwareDemo;
+import com.stackroute.awareinterface.resourceLoaderAwareDemo;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -36,4 +46,35 @@ public class springConfig {
     actor.setName("lohi");
     return actor;
     }
+
+
+    @Bean(name= "applicationContextAwareDemo")
+    public ApplicationContextAware getApplicationContextAware() {
+        return new applicationContextAwareDemo();
+    }
+
+        @Bean(name= "beanFactoryAwareDemo")
+        public BeanFactoryAware getBeanFactoryAware(){
+            return new beanFactoryAwareDemo();
+
+
+
+
+    }
+
+
+    @Bean(name= "beanNameAwareDemo")
+    public BeanNameAware getBeanNameAware(){
+        return new beanNameAwareDemo();
+
+    }
+    @Bean(name= "ResourceLoaderAwareDemo")
+    public ResourceLoaderAware getResourceLoaderAwareDemo(){
+        return new resourceLoaderAwareDemo();
+
+    }
+
+
+
+
 }
