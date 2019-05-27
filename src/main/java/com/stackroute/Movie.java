@@ -1,21 +1,23 @@
 package com.stackroute;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Movie
 {
    private String movieName;
     private String movieId;
-   private  Actor actor;
+    private  Actor actor;
 
 
     public Movie() {
         System.out.println("Object Created");
     }
-    public Movie(String movieName, String movieId, Actor actor) {
-        this.movieName = movieName;
-        this.movieId = movieId;
-        this.actor = actor;
-    }
+//    public Movie(String movieName, String movieId, Actor actor) {
+//        this.movieName = movieName;
+//        this.movieId = movieId;
+//        this.actor = actor;
+//    }
 
 
     public String getMovieName() {
@@ -33,7 +35,7 @@ public class Movie
     public void setMovieId(String movieId) {
         this.movieId = movieId;
     }
-
+@Autowired
     public void setActor(Actor actor) {
         this.actor = actor;
     }

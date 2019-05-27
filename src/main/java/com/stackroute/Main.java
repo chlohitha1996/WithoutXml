@@ -22,8 +22,9 @@ public class Main {
         applicationContext.refresh();
         Movie movie=(Movie) applicationContext.getBean("movie");
         System.out.println(movie);
-        Movie movie1=(Movie) applicationContext.getBean("movie1");
-        System.out.println(movie1);
+//        Movie movie1=(Movie) applicationContext.getBean("movie");
+//        System.out.println(movie1);
+//        System.out.println(movie==movie1);
     }
 
 }
