@@ -1,15 +1,7 @@
 package com.stackroute.config;
 import com.stackroute.Actor;
+import com.stackroute.BeanLifeCycle.BeanPostProcessorDemoBean;
 import com.stackroute.Movie;
-import com.stackroute.awareinterface.applicationContextAwareDemo;
-import com.stackroute.awareinterface.beanFactoryAwareDemo;
-import com.stackroute.awareinterface.beanNameAwareDemo;
-import com.stackroute.awareinterface.resourceLoaderAwareDemo;
-import com.stackroute.BeanLifeCycle.BeanLifeCycle;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -44,7 +36,7 @@ public class springConfig {
     return actor;
     }
 
-    @Bean(name= "applicationContextAwareDemo")
+  /*  @Bean(name= "applicationContextAwareDemo")
     public ApplicationContextAware getApplicationContextAware() {
         return new applicationContextAwareDemo();
     }
@@ -69,9 +61,13 @@ public class springConfig {
     @Bean(name = {"BeanLifeCycle"},initMethod = "customInit",destroyMethod = "CustomDestroy")
     public BeanLifeCycle getBeanLifeCycle(){
         return new BeanLifeCycle();
-    }
+    }*/
 
 
+@Bean(name="beanPostProcessorDemoBean")
+    public BeanPostProcessorDemoBean getBeanPostProcessorDemoBean(){
+        return new BeanPostProcessorDemoBean();
+}
 
 
 
