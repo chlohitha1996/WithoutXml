@@ -20,7 +20,7 @@ public class Main {
         AnnotationConfigApplicationContext applicationContext=new AnnotationConfigApplicationContext();
         applicationContext.register(AppConfig.class);
         applicationContext.refresh();
-        Movie movie=(Movie) applicationContext.getBean("movie");
+        Movie movie=(Movie) applicationContext.getBean("movie1");
         System.out.println(movie);
 
 

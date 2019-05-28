@@ -35,7 +35,13 @@ public class springConfig {
     actor.setName("lohi");
     return actor;
     }
+    Actor act=new Actor("lohi","female",23);
+    @Bean(name="movie1")
+    public Movie getMovie1() {
 
+        Movie movie = new Movie("123f","sfgd",act);
+        return movie;
+    }
   /*  @Bean(name= "applicationContextAwareDemo")
     public ApplicationContextAware getApplicationContextAware() {
         return new applicationContextAwareDemo();

@@ -13,11 +13,11 @@ public class Movie
     public Movie() {
         System.out.println("Object Created");
     }
-//    public Movie(String movieName, String movieId, Actor actor) {
-//        this.movieName = movieName;
-//        this.movieId = movieId;
-//        this.actor = actor;
-//    }
+    public Movie(String movieName, String movieId, Actor actor) {
+        this.movieName = movieName;
+    this.movieId = movieId;
+        this.actor = actor;
+   }
 
 
     public String getMovieName() {
